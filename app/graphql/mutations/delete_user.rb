@@ -1,5 +1,5 @@
 class Mutations::DeleteUser < Mutations::BaseMutation
-  argument :id, Integer, required: true
+  argument :id, ID ,Integer, required: true
 
   field :user, Types::UserType, null: false
   field :errors, [String], null: false

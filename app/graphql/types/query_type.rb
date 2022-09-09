@@ -24,5 +24,12 @@ module Types
     def post(id:)
       Post.find(id)
     end
+    field :user, Types::UserType, null: false do
+      argument :id, ID, required: true
+      description 'find user by id'
+    end
+    def user(id:)
+      user = User.find(id)
+    end
   end
 end
